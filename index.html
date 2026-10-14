@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student Performance Prediction — Machine Learning</title>
+<title>Student Performance Prediction — Simple Presentation</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,10 +40,10 @@ body{font-family:Inter,system-ui,sans-serif;color:var(--text)}
 .reveal .slides{z-index:5}
 .reveal .slides>section{padding:0!important}
 .reveal h1,.reveal h2,.reveal h3,.reveal h4{color:var(--text)!important;text-transform:none!important}
-.reveal h1{font-size:3.3em!important;line-height:.98!important;letter-spacing:-.055em!important;font-weight:900!important}
-.reveal h2{font-size:2.65em!important;line-height:1!important;letter-spacing:-.045em!important;font-weight:850!important;margin:0 0 24px!important}
+.reveal h1{font-size:3em!important;line-height:.98!important;letter-spacing:-.055em!important;font-weight:900!important}
+.reveal h2{font-size:2.4em!important;line-height:1!important;letter-spacing:-.045em!important;font-weight:850!important;margin:0 0 24px!important}
 .reveal p,.reveal li,.reveal td,.reveal th{color:var(--muted)!important}
-.reveal p{font-size:19px;line-height:1.55}
+.reveal p{font-size:18px;line-height:1.55}
 .reveal strong{color:#fff!important}
 .mono{font-family:"JetBrains Mono",monospace}
 .accent{color:var(--accent)!important}
@@ -51,7 +51,6 @@ body{font-family:Inter,system-ui,sans-serif;color:var(--text)}
 .muted{color:var(--dim)!important}
 
 .shell{height:100%;width:100%;position:relative}
-/* Content shifted right of sidebar, top padding reduced */
 .content{
   width:min(960px,calc(100% - 560px));
   height:100%;
@@ -100,56 +99,56 @@ body{font-family:Inter,system-ui,sans-serif;color:var(--text)}
   border:1px solid var(--line);border-radius:4px;
   box-shadow:inset 1px 1px rgba(255,255,255,.045),0 18px 50px rgba(0,0,0,.35);
 }
-.card{padding:26px 24px;min-height:170px;transition:.4s var(--ease)}
+.card{padding:24px 20px;min-height:160px;transition:.4s var(--ease)}
 .card:hover{transform:translateY(-5px);border-color:var(--line2)}
-.card .icon{font-size:28px;color:var(--accent);margin-bottom:18px}
-.card h4{font:800 13px "JetBrains Mono";letter-spacing:2px;margin:0 0 10px}
-.card p{font-size:15px!important;line-height:1.5!important;margin:0}
-.glass{padding:28px 30px}
-.callout{border-left:2px solid var(--accent);padding:17px 22px;background:rgba(116,214,255,.035);margin-top:18px}
-.callout p{margin:0;font-size:15px!important}
-.stat{padding:20px 24px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
-.stat .n{font:900 32px "JetBrains Mono";color:#fff}
+.card .icon{font-size:24px;color:var(--accent);margin-bottom:14px}
+.card h4{font:800 13px "JetBrains Mono";letter-spacing:2px;margin:0 0 8px}
+.card p{font-size:14px!important;line-height:1.5!important;margin:0}
+.glass{padding:26px 28px}
+.callout{border-left:2px solid var(--accent);padding:15px 20px;background:rgba(116,214,255,.035);margin-top:16px}
+.callout p{margin:0;font-size:14px!important}
+.stat{padding:18px 20px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+.stat .n{font:900 28px "JetBrains Mono";color:#fff}
 .stat .l{font:700 11px "JetBrains Mono";letter-spacing:2px;color:var(--dim);margin-top:6px}
 
 table{width:100%;border-collapse:collapse}
-.reveal th{font:700 12px "JetBrains Mono"!important;letter-spacing:2px;color:#fff!important;text-transform:uppercase;border-bottom:1px solid var(--line2)!important;padding:15px 10px!important}
-.reveal td{font-size:15px!important;padding:15px 10px!important;border-bottom:1px solid var(--line)!important}
+.reveal th{font:700 12px "JetBrains Mono"!important;letter-spacing:2px;color:#fff!important;text-transform:uppercase;border-bottom:1px solid var(--line2)!important;padding:14px 10px!important}
+.reveal td{font-size:14px!important;padding:14px 10px!important;border-bottom:1px solid var(--line)!important}
 .highlight td{color:#fff!important}
 
 .pipeline{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:stretch}
-.step{position:relative;padding:22px 17px;border:1px solid var(--line);background:rgba(255,255,255,.025);min-height:170px}
-.step:not(:last-child):after{content:"→";position:absolute;right:-13px;top:50%;z-index:2;color:var(--accent);font:700 18px "JetBrains Mono"}
+.step{position:relative;padding:20px 15px;border:1px solid var(--line);background:rgba(255,255,255,.025);min-height:160px}
+.step:not(:last-child):after{content:"→";position:absolute;right:-12px;top:50%;z-index:2;color:var(--accent);font:700 16px "JetBrains Mono"}
 .step .num{font:700 12px "JetBrains Mono";color:var(--accent)}
-.step h4{font-size:15px;margin:15px 0 8px}
-.step p{font-size:13px!important;margin:0;line-height:1.45!important}
+.step h4{font-size:14px;margin:12px 0 6px}
+.step p{font-size:12.5px!important;margin:0;line-height:1.4!important}
 
-.barRow{display:grid;grid-template-columns:150px 1fr 62px;gap:13px;align-items:center;margin:15px 0}
-.barName{font:600 12px "JetBrains Mono";color:#e2e6ed}
-.barTrack{height:12px;background:rgba(255,255,255,.06);overflow:hidden}
+.barRow{display:grid;grid-template-columns:140px 1fr 58px;gap:12px;align-items:center;margin:13px 0}
+.barName{font:600 11.5px "JetBrains Mono";color:#e2e6ed}
+.barTrack{height:11px;background:rgba(255,255,255,.06);overflow:hidden}
 .barFill{height:100%;width:0;background:linear-gradient(90deg,var(--accent2),var(--accent));box-shadow:0 0 16px rgba(116,214,255,.25);transition:width 1.3s var(--ease)}
 .present .barFill{width:var(--w)}
-.barValue{font:800 13px "JetBrains Mono";text-align:right;color:#fff}
+.barValue{font:800 12px "JetBrains Mono";text-align:right;color:#fff}
 
-.metricGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
-.metric{padding:16px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
-.metric b{font:800 22px "JetBrains Mono";color:#fff}.metric span{display:block;font:600 11px "JetBrains Mono";color:var(--dim);letter-spacing:1.5px;margin-top:4px}
+.metricGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}
+.metric{padding:14px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+.metric b{font:800 20px "JetBrains Mono";color:#fff}.metric span{display:block;font:600 10.5px "JetBrains Mono";color:var(--dim);letter-spacing:1px;margin-top:4px}
 
-.roc{height:240px;position:relative;border-left:1px solid var(--line2);border-bottom:1px solid var(--line2);background:
+.roc{height:220px;position:relative;border-left:1px solid var(--line2);border-bottom:1px solid var(--line2);background:
  linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
  linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:25% 25%}
 .roc svg{width:100%;height:100%}
 .rocPath{stroke-dasharray:500;stroke-dashoffset:500;transition:stroke-dashoffset 1.8s ease .2s}
 .present .rocPath{stroke-dashoffset:0}
 
-.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
-.phase{padding:22px;border-top:2px solid var(--line2);background:rgba(255,255,255,.025)}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.phase{padding:20px;border-top:2px solid var(--line2);background:rgba(255,255,255,.025)}
 .phase b{font:800 12px "JetBrains Mono";color:var(--accent);letter-spacing:2px}
-.phase h4{font-size:16px;margin:12px 0 8px}.phase p{font-size:14px!important;margin:0}
+.phase h4{font-size:15px;margin:10px 0 6px}.phase p{font-size:13.5px!important;margin:0}
 
-.endQuote{max-width:860px;padding:32px 36px;border:1px solid var(--line2);background:linear-gradient(135deg,rgba(116,214,255,.05),rgba(169,139,255,.04));text-align:left}
-.endQuote p{font-size:20px!important;color:#e5e8ed!important}
-.qa{font:800 13px "JetBrains Mono";letter-spacing:4px;color:var(--accent);margin-top:25px}
+.endQuote{max-width:860px;padding:30px 34px;border:1px solid var(--line2);background:linear-gradient(135deg,rgba(116,214,255,.05),rgba(169,139,255,.04));text-align:left}
+.endQuote p{font-size:18px!important;color:#e5e8ed!important}
+.qa{font:800 13px "JetBrains Mono";letter-spacing:4px;color:var(--accent);margin-top:22px}
 
 .fragment.fx{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .75s var(--ease)}
 .fragment.fx.visible{opacity:1;transform:none}
@@ -159,82 +158,41 @@ table{width:100%;border-collapse:collapse}
 .reveal .progress{display:none}
 .reveal .slide-number{display:none}
 
-
-/* ===== CINEMATIC MOTION ENGINE ===== */
 .reveal{perspective:1800px;transform-style:preserve-3d;overflow:hidden}
 .reveal .slides{transform-style:preserve-3d}
 .reveal .slides>section{transform-style:preserve-3d}
 .studioLight{position:fixed;inset:-25%;z-index:2;pointer-events:none;background:radial-gradient(ellipse at 18% 12%,rgba(255,255,255,.17),transparent 22%),radial-gradient(ellipse at 70% 70%,rgba(116,214,255,.045),transparent 30%);mix-blend-mode:screen;animation:lightBreath 8s ease-in-out infinite}
 @keyframes lightBreath{50%{opacity:.68;transform:translate3d(2%,-1%,0) scale(1.04)}}
 
-/* ===== SIDEBAR — CLEAN LOCKED CENTRE ===== */
 .curveNav{
-  position:fixed;
-  left:24px;
-  top:50%;
-  width:230px;
-  height:600px;
-  transform:translateY(-50%);
-  z-index:35;
-  pointer-events:none;
-  perspective:900px;
+  position:fixed; left:24px; top:50%; width:230px; height:600px;
+  transform:translateY(-50%); z-index:35; pointer-events:none; perspective:900px;
 }
-/* single vertical hairline behind the icons */
 .curveNav:before{
-  content:"";
-  position:absolute;
-  left:52px; top:60px; bottom:60px;
-  width:1px;
+  content:""; position:absolute; left:52px; top:60px; bottom:60px; width:1px;
   background:linear-gradient(transparent,rgba(255,255,255,.18) 25%,rgba(255,255,255,.18) 75%,transparent);
   pointer-events:none;
 }
 .curveTrack{
-  position:absolute; left:0; top:0;
-  width:100%; height:100%;
-  transform-style:preserve-3d;
-  transition:transform 1s cubic-bezier(.16,1,.3,1);
-  will-change:transform;
+  position:absolute; left:0; top:0; width:100%; height:100%;
+  transform-style:preserve-3d; transition:transform 1s cubic-bezier(.16,1,.3,1); will-change:transform;
 }
 .curveItem{
-  position:absolute;
-  left:40px;
-  width:180px;
-  height:44px;
-  display:flex;
-  align-items:center;
-  gap:12px;
-  transform-origin:0% center;
+  position:absolute; left:40px; width:180px; height:44px;
+  display:flex; align-items:center; gap:12px; transform-origin:0% center;
   transition:transform .9s cubic-bezier(.16,1,.3,1), opacity .55s ease;
-  color:#b8bec8;
-  font:700 11.5px "JetBrains Mono",monospace;
-  letter-spacing:1.8px;
-  white-space:nowrap;
-  text-transform:uppercase;
-  will-change:transform,opacity;
+  color:#b8bec8; font:700 11.5px "JetBrains Mono",monospace; letter-spacing:1.8px;
+  white-space:nowrap; text-transform:uppercase; will-change:transform,opacity;
 }
 .curveItem i{
-  display:grid;
-  place-items:center;
-  flex-shrink:0;
-  width:26px;
-  height:26px;
-  border:1px solid rgba(255,255,255,.2);
-  font-style:normal;
-  font-size:9px;
-  color:#a8b0bd;
+  display:grid; place-items:center; flex-shrink:0; width:26px; height:26px;
+  border:1px solid rgba(255,255,255,.2); font-style:normal; font-size:9px; color:#a8b0bd;
   transition:all .5s cubic-bezier(.16,1,.3,1);
 }
 .curveItem.active{color:#fff}
-.curveItem.active i{
-  border-color:var(--accent);
-  color:var(--accent);
-  box-shadow:0 0 18px rgba(116,214,255,.5);
-}
-.curveItem.active span{
-  text-shadow:0 0 14px rgba(255,255,255,.35);
-}
+.curveItem.active i{border-color:var(--accent); color:var(--accent); box-shadow:0 0 18px rgba(116,214,255,.5)}
+.curveItem.active span{text-shadow:0 0 14px rgba(255,255,255,.35)}
 
-/* ===== PERSISTENT 3D GEOMETRY ===== */
 .geoStage{position:fixed;right:2.5vw;bottom:3.5vh;width:390px;height:390px;z-index:8;pointer-events:none;perspective:1100px;opacity:.98}
 .geoStage:before{content:"";position:absolute;inset:14%;border:1px solid rgba(255,255,255,.08);border-radius:50%;box-shadow:0 0 80px rgba(116,214,255,.04)}
 .geoStage:after{content:"";position:absolute;left:25px;right:25px;bottom:6px;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);box-shadow:0 0 40px rgba(255,255,255,.16);animation:stageBreath 7s ease-in-out infinite}
@@ -276,7 +234,6 @@ table{width:100%;border-collapse:collapse}
 .node.n1{left:72px;top:90px}.node.n2{left:236px;top:111px;animation-delay:-.7s}.node.n3{left:175px;top:248px;animation-delay:-1.4s}.node.n4{left:294px;top:274px;animation-delay:-2.1s}
 @keyframes nodePulse{50%{transform:scale(1.7);opacity:.55}}
 
-/* cinematic slide travel */
 .reveal .slides>section{backface-visibility:hidden}
 .reveal .slides>section:not(.present) .content{opacity:.78}
 .reveal section.entering .content{animation:stageArrival 1.05s cubic-bezier(.16,1,.3,1) both}
@@ -294,11 +251,9 @@ table{width:100%;border-collapse:collapse}
 .reveal section.hero.entering .logo{animation:heroBadge 1.25s cubic-bezier(.16,1,.3,1) both}
 @keyframes heroBadge{0%{transform:scale(2.5) rotate(-12deg);opacity:0;filter:blur(8px)}55%{opacity:1}100%{transform:scale(1) rotate(0)}}
 
-/* crosshair blueprint */
 .crosshair{position:fixed;right:6.5vw;top:14vh;width:22px;height:22px;z-index:7;opacity:.5;pointer-events:none}
 .crosshair:before,.crosshair:after{content:"";position:absolute;background:rgba(255,255,255,.22)}.crosshair:before{width:100%;height:1px;top:10px}.crosshair:after{height:100%;width:1px;left:10px}
 
-/* fragments */
 .fragment.fx{opacity:0;transform:translate3d(0,28px,-60px) rotateX(5deg);filter:blur(3px);transition:opacity .7s ease,transform 1s cubic-bezier(.16,1,.3,1),filter .7s ease}
 .fragment.fx.visible{opacity:1;transform:none;filter:none}
 .delay1{transition-delay:.10s!important}.delay2{transition-delay:.20s!important}.delay3{transition-delay:.30s!important}
@@ -306,7 +261,7 @@ table{width:100%;border-collapse:collapse}
 @media(max-width:900px){
   .content{width:calc(100% - 70px);padding:50px 0}
   .sectionRail{display:none}
-  .reveal h1{font-size:2.4em!important}.reveal h2{font-size:1.9em!important}
+  .reveal h1{font-size:2.2em!important}.reveal h2{font-size:1.8em!important}
   .cols4{grid-template-columns:repeat(2,1fr)}.cols3{grid-template-columns:1fr}
   .pipeline{grid-template-columns:1fr 1fr}.step:not(:last-child):after{display:none}
   .barRow{grid-template-columns:120px 1fr 58px}
@@ -317,7 +272,7 @@ table{width:100%;border-collapse:collapse}
   .cols2,.cols4,.timeline{grid-template-columns:1fr}
   .pipeline{grid-template-columns:1fr}
   .metricGrid{grid-template-columns:1fr 1fr}
-  .reveal p{font-size:15px}.reveal h1{font-size:1.9em!important}
+  .reveal p{font-size:14px}.reveal h1{font-size:1.7em!important}
 }
 @media(prefers-reduced-motion:reduce){
   *,*:before,*:after{animation:none!important;transition:none!important}
@@ -327,7 +282,7 @@ table{width:100%;border-collapse:collapse}
 
 <body>
 <div class="hud">
-  <div class="hud-brand">STUDENT PERFORMANCE / ML RESEARCH</div>
+  <div class="hud-brand">STUDENT PERFORMANCE PROJECT</div>
   <div class="hud-num" id="hudNum">01 / 10</div>
   <div class="sectionRail" id="rail"></div>
   <div class="progressLine"><span id="progress"></span></div>
@@ -373,15 +328,15 @@ table{width:100%;border-collapse:collapse}
       <line x1="35" y1="40" x2="46.5" y2="33.5" stroke="currentColor" stroke-width="1" opacity="0.55"/>
     </svg>
   </div>
-  <div class="kicker fragment fx">RESEARCH PRESENTATION</div>
+  <div class="kicker fragment fx">PROJECT PRESENTATION</div>
   <h1>Student Performance Prediction
-    <span class="sub">USING MACHINE LEARNING</span>
+    <span class="sub">USING SMART COMPUTER PROGRAMS</span>
   </h1>
   <p class="meta fragment fx delay1">
-    <strong>[STUDENT NAME]</strong> · Guide: [GUIDE NAME]<br>
-    Department of CSE · [COLLEGE NAME] · Academic Year 2025–26
+    <strong>Team:</strong> Bhawishya Kumar, Aditya Bhardwaj, Kasim, Kaniskk Kaushik<br>
+    Guide: Vaibhavi Bhaisali · Academic Year 2025–26
   </p>
-  <div class="qa fragment fx delay2">PREDICT · INTERVENE · IMPROVE</div>
+  <div class="qa fragment fx delay2">PREDICT · HELP · IMPROVE</div>
 </div>
 </div>
 </section>
@@ -392,16 +347,16 @@ table{width:100%;border-collapse:collapse}
   <div class="kicker fragment fx">02 / INTRODUCTION</div>
   <h2>Why Predict Student Performance?</h2>
   <div class="cardGrid cols3">
-    <div class="card fragment fx"><div class="icon">01</div><h4>PROBLEM</h4><p>Identifying students who may struggle before final outcomes is difficult using conventional monitoring alone.</p></div>
-    <div class="card fragment fx delay1"><div class="icon">02</div><h4>OBJECTIVE</h4><p>Develop a machine-learning approach capable of predicting student outcomes from academic and related attributes.</p></div>
-    <div class="card fragment fx delay2"><div class="icon">03</div><h4>IMPACT</h4><p>Use predictions as an early-warning signal so educators can plan timely and targeted intervention.</p></div>
+    <div class="card fragment fx"><div class="icon">01</div><h4>THE PROBLEM</h4><p>Ye pata lagانا ki kaun se students padhai mein pichhad rahe hain, aam taur par final exam ke baad hi pata chalta hai.</p></div>
+    <div class="card fragment fx delay1"><div class="icon">02</div><h4>OBJECTIVE</h4><p>Ek aisa computer model banana jo students ke pichle records dekh kar pehle hi bata sake ki woh kaisa perform karenge.</p></div>
+    <div class="card fragment fx delay2"><div class="icon">03</div><h4>IMPACT</h4><p>Isse teachers ko pehle hi warning mil jati hai taaki woh weak students ki time par madad kar sakein.</p></div>
   </div>
-  <div class="callout fragment fx delay3"><p><strong class="accent">CORE IDEA · </strong>Move from reactive academic support to data-informed early intervention.</p></div>
+  <div class="callout fragment fx delay3"><p><strong class="accent">MAIN IDEA · </strong>Result aane ke baad rone se behtar hai ki pehle hi students ki help kar di jaye.</p></div>
   <div class="cardGrid cols4" style="margin-top:15px">
-    <div class="stat fragment fx"><div class="n">1044</div><div class="l">STUDENT SAMPLES</div></div>
-    <div class="stat fragment fx delay1"><div class="n">33</div><div class="l">INPUT FEATURES</div></div>
-    <div class="stat fragment fx delay2"><div class="n">80:20</div><div class="l">TRAIN / TEST SPLIT</div></div>
-    <div class="stat fragment fx delay3"><div class="n">5-FOLD</div><div class="l">CROSS VALIDATION</div></div>
+    <div class="stat fragment fx"><div class="n">1044</div><div class="l">TOTAL STUDENTS</div></div>
+    <div class="stat fragment fx delay1"><div class="n">33</div><div class="l">DATA POINTS</div></div>
+    <div class="stat fragment fx delay2"><div class="n">80:20</div><div class="l">TRAIN / TEST RATIO</div></div>
+    <div class="stat fragment fx delay3"><div class="n">5</div><div class="l">CHECK ROUNDS</div></div>
   </div>
 </div></div>
 </section>
@@ -409,23 +364,23 @@ table{width:100%;border-collapse:collapse}
 <!-- 03 -->
 <section>
 <div class="shell"><div class="content">
-  <div class="kicker fragment fx">03 / LITERATURE REVIEW</div>
-  <h2>Related Work & Research Gap</h2>
+  <div class="kicker fragment fx">03 / PREVIOUS RESEARCH</div>
+  <h2>Pehle Ke Kaam Aur Humari Soch</h2>
   <div class="glass fragment fx">
     <table>
-      <thead><tr><th>Study</th><th>Approach</th><th>Reported Range</th><th>Direction</th></tr></thead>
+      <thead><tr><th>Study</th><th>Tarika (Method)</th><th>Kitna Sahi Raha</th><th>Goal</th></tr></thead>
       <tbody>
-        <tr><td>Cortez & Silva (2008)</td><td>Decision Trees</td><td>70–80%</td><td>Academic prediction</td></tr>
-        <tr><td>Kotsiantis (2010)</td><td>SVM</td><td>72–83%</td><td>Classification</td></tr>
-        <tr><td>Amrieh et al. (2016)</td><td>Neural Networks</td><td>75–87%</td><td>Student performance</td></tr>
-        <tr><td>Hussain (2019)</td><td>Ensemble</td><td>78–88%</td><td>Improved prediction</td></tr>
-        <tr class="highlight"><td>Recent work (2023)</td><td>Ensemble</td><td>80–90%</td><td>Higher predictive performance</td></tr>
+        <tr><td>Cortez & Silva (2008)</td><td>Decision Trees</td><td>70–80%</td><td>Marks predict karna</td></tr>
+        <tr><td>Kotsiantis (2010)</td><td>SVM Algorithm</td><td>72–83%</td><td>Category banana</td></tr>
+        <tr><td>Amrieh et al. (2016)</td><td>Neural Networks</td><td>75–87%</td><td>Student analysis</td></tr>
+        <tr><td>Hussain (2019)</td><td>Combined Models</td><td>78–88%</td><td>Behtar prediction</td></tr>
+        <tr class="highlight"><td>Recent work (2023)</td><td>Advanced AI Model</td><td>80–90%</td><td>High accuracy result</td></tr>
       </tbody>
     </table>
   </div>
   <div class="cardGrid cols2" style="margin-top:15px">
-    <div class="callout fragment fx"><p><strong class="accent">OBSERVATION · </strong>Ensemble approaches generally show stronger predictive performance than several individual classical models.</p></div>
-    <div class="callout fragment fx delay1"><p><strong class="accent">GAP · </strong>Limited emphasis on early-semester prediction and model interpretability motivates a more practical pipeline.</p></div>
+    <div class="callout fragment fx"><p><strong class="accent">DEKHA GAYA · </strong>Mil-jul kar (ensemble) kaam karne wale models zyada behtar aur sateek result dete hain.</p></div>
+    <div class="callout fragment fx delay1"><p><strong class="accent">KAMI · </strong>Pehle ki studies mein session ki shuruat mein help karne par kam dhyan diya gaya hai.</p></div>
   </div>
 </div></div>
 </section>
@@ -434,66 +389,66 @@ table{width:100%;border-collapse:collapse}
 <section>
 <div class="shell"><div class="content">
   <div class="kicker fragment fx">04 / DATASET</div>
-  <h2>Data Source & Feature Space</h2>
+  <h2>Data Kahan Se Liya Gaya?</h2>
   <div class="cardGrid cols2">
     <div class="glass fragment fx">
-      <div class="kicker">DATASET SNAPSHOT</div>
+      <div class="kicker">DATA DETAILS</div>
       <div class="cardGrid cols3">
-        <div class="stat"><div class="n">1,044</div><div class="l">SAMPLES</div></div>
-        <div class="stat"><div class="n">33</div><div class="l">FEATURES</div></div>
-        <div class="stat"><div class="n">1</div><div class="l">TARGET</div></div>
+        <div class="stat"><div class="n">1,044</div><div class="l">RECORDS</div></div>
+        <div class="stat"><div class="n">33</div><div class="l">DETAILS</div></div>
+        <div class="stat"><div class="n">1</div><div class="l">FINAL GOAL</div></div>
       </div>
-      <p style="margin-top:18px">The target is <strong>Final Grade</strong>. The feature space represents multiple dimensions of student context rather than relying on a single indicator.</p>
+      <p style="margin-top:18px">Main lakshya <strong>Final Grade (Final Marks)</strong> pata karna hai. Ismein sirf ek cheez nahi balki student ki poori background dekhi gayi hai.</p>
     </div>
     <div class="glass fragment fx delay1">
-      <div class="kicker">FEATURE GROUPS</div>
+      <div class="kicker">DETAILS KI CATEGORY</div>
       <div class="cardGrid cols2">
-        <div class="card"><h4>DEMOGRAPHIC</h4><p>Student background and profile variables.</p></div>
-        <div class="card"><h4>ACADEMIC</h4><p>Grades and prior academic indicators.</p></div>
-        <div class="card"><h4>BEHAVIORAL</h4><p>Attendance and related behavior signals.</p></div>
-        <div class="card"><h4>ENVIRONMENT</h4><p>Contextual factors associated with learning.</p></div>
+        <div class="card"><h4>BACKGROUND</h4><p>Student ki personal aur parivarik jankari.</p></div>
+        <div class="card"><h4>PADHAI</h4><p>Pichle exam ke marks aur performance.</p></div>
+        <div class="card"><h4>AADATEIN</h4><p>School kitna late ya absent hote hain.</p></div>
+        <div class="card"><h4>MAHAUL</h4><p>Padhai ke aas-paas ka vatavaran.</p></div>
       </div>
     </div>
   </div>
-  <div class="callout fragment fx delay2"><p><strong class="accent">TARGET · </strong>Final Grade is the outcome the model attempts to predict from the available input features.</p></div>
+  <div class="callout fragment fx delay2"><p><strong class="accent">GOAL · </strong>Inhi sabhi jankariyon ko use karke final grade ka andaza lagana.</p></div>
 </div></div>
 </section>
 
 <!-- 05 -->
 <section>
 <div class="shell"><div class="content">
-  <div class="kicker fragment fx">05 / METHODOLOGY</div>
-  <h2>End-to-End Research Pipeline</h2>
+  <div class="kicker fragment fx">05 / STEPS</div>
+  <h2>Kaam Karne Ka Tarika (Pipeline)</h2>
   <div class="pipeline">
-    <div class="step fragment fx"><div class="num">01</div><h4>DATA</h4><p>Collect and consolidate student records.</p></div>
-    <div class="step fragment fx delay1"><div class="num">02</div><h4>PREPROCESS</h4><p>Clean data, encode variables and handle missing values.</p></div>
-    <div class="step fragment fx delay2"><div class="num">03</div><h4>FEATURES</h4><p>Scale/select features and address class imbalance using SMOTE.</p></div>
-    <div class="step fragment fx delay3"><div class="num">04</div><h4>TRAIN</h4><p>Compare multiple machine-learning algorithms.</p></div>
-    <div class="step fragment fx"><div class="num">05</div><h4>EVALUATE</h4><p>Use accuracy, F1, ROC-AUC and 5-fold cross-validation.</p></div>
+    <div class="step fragment fx"><div class="num">01</div><h4>DATA COLLECTION</h4><p>Students ka data ikhatta karna.</p></div>
+    <div class="step fragment fx delay1"><div class="num">02</div><h4>CLEANING</h4><p>Gandi ya galat entries ko saaf karna.</p></div>
+    <div class="step fragment fx delay2"><div class="num">03</div><h4>PREPARATION</h4><p>Data ko sahi format mein set karna.</p></div>
+    <div class="step fragment fx delay3"><div class="num">04</div><h4>TRAINING</h4><p>Alag-alag AI models ko sikhana.</p></div>
+    <div class="step fragment fx"><div class="num">05</div><h4>TESTING</h4><p>Check karna ki model kitna sahi bol raha hai.</p></div>
   </div>
   <div class="cardGrid cols3" style="margin-top:18px">
-    <div class="stat fragment fx"><div class="n">80:20</div><div class="l">TRAIN / TEST</div></div>
-    <div class="stat fragment fx delay1"><div class="n">5-FOLD</div><div class="l">CROSS VALIDATION</div></div>
-    <div class="stat fragment fx delay2"><div class="n">42</div><div class="l">RANDOM STATE</div></div>
+    <div class="stat fragment fx"><div class="n">80:20</div><div class="l">TRAIN / TEST SPLIT</div></div>
+    <div class="stat fragment fx delay1"><div class="n">5 TIMES</div><div class="l">CROSS CHECK</div></div>
+    <div class="stat fragment fx delay2"><div class="n">42</div><div class="l">RANDOM CODE</div></div>
   </div>
-  <div class="callout fragment fx"><p><strong class="accent">WHY THIS MATTERS · </strong>A fixed and reproducible pipeline makes model comparison more consistent and easier to evaluate.</p></div>
+  <div class="callout fragment fx"><p><strong class="accent">FAYEDA · </strong>Sahi steps follow karne se result bilkul barabar aur bharosemand milta hai.</p></div>
 </div></div>
 </section>
 
 <!-- 06 -->
 <section>
 <div class="shell"><div class="content">
-  <div class="kicker fragment fx">06 / ALGORITHMS</div>
-  <h2>Models Compared</h2>
+  <div class="kicker fragment fx">06 / MODELS</div>
+  <h2>Kaun-Kaun Se Models Try Kiye?</h2>
   <div class="cardGrid cols4">
-    <div class="card fragment fx"><div class="icon">01</div><h4>LOGISTIC</h4><p>Interpretable classification baseline.</p></div>
-    <div class="card fragment fx delay1"><div class="icon">02</div><h4>DECISION TREE</h4><p>Rule-based recursive splits.</p></div>
-    <div class="card fragment fx delay2"><div class="icon">03</div><h4>RANDOM FOREST</h4><p>Robust tree-based ensemble.</p></div>
-    <div class="card fragment fx delay3"><div class="icon">04</div><h4>SVM</h4><p>Margin-based high-dimensional classifier.</p></div>
-    <div class="card fragment fx"><div class="icon">05</div><h4>XGBOOST</h4><p>Gradient-boosted decision trees.</p></div>
-    <div class="card fragment fx delay1"><div class="icon">06</div><h4>ANN</h4><p>Neural-network pattern learning.</p></div>
-    <div class="card fragment fx delay2"><div class="icon">07</div><h4>KNN</h4><p>Instance-based neighborhood method.</p></div>
-    <div class="card fragment fx delay3" style="border-color:rgba(116,214,255,.4)"><div class="icon">★</div><h4>BEST RESULT</h4><p><strong>XGBoost — 92.7%</strong> in the supplied results.</p></div>
+    <div class="card fragment fx"><div class="icon">01</div><h4>LOGISTIC</h4><p>Simple classification model.</p></div>
+    <div class="card fragment fx delay1"><div class="icon">02</div><h4>DECISION TREE</h4><p>Sawal-jawab ke tarike par adharit.</p></div>
+    <div class="card fragment fx delay2"><div class="icon">03</div><h4>RANDOM FOREST</h4><p>Bahut saare trees ka group.</p></div>
+    <div class="card fragment fx delay3"><div class="icon">04</div><h4>SVM</h4><p>Line draw karke alag karne wala model.</p></div>
+    <div class="card fragment fx"><div class="icon">05</div><h4>XGBOOST</h4><p>Tez aur shaktishali gradient model.</p></div>
+    <div class="card fragment fx delay1"><div class="icon">06</div><h4>ANN</h4><p>Insani dimaag ki tarah sikhne wala.</p></div>
+    <div class="card fragment fx delay2"><div class="icon">07</div><h4>KNN</h4><p>Padosiyo ke hisab se faisla lene wala.</p></div>
+    <div class="card fragment fx delay3" style="border-color:rgba(116,214,255,.4)"><div class="icon">★</div><h4>BEST RESULT</h4><p><strong>XGBoost — 92.7%</strong> sabse behtar nikla.</p></div>
   </div>
 </div></div>
 </section>
@@ -501,11 +456,11 @@ table{width:100%;border-collapse:collapse}
 <!-- 07 -->
 <section>
 <div class="shell"><div class="content">
-  <div class="kicker fragment fx">07 / MODEL EVALUATION</div>
-  <h2>Performance Comparison</h2>
+  <div class="kicker fragment fx">07 / RESULTS</div>
+  <h2>Kis Model Ne Kaisa Perform Kiya?</h2>
   <div class="cardGrid cols2">
     <div class="glass fragment fx">
-      <div class="kicker">ACCURACY</div>
+      <div class="kicker">ACCURACY COMPARISON</div>
       <div class="barRow"><div class="barName">LOGISTIC</div><div class="barTrack"><div class="barFill" style="--w:74.3%"></div></div><div class="barValue">74.3%</div></div>
       <div class="barRow"><div class="barName">SVM</div><div class="barTrack"><div class="barFill" style="--w:85.1%"></div></div><div class="barValue">85.1%</div></div>
       <div class="barRow"><div class="barName">RANDOM FOREST</div><div class="barTrack"><div class="barFill" style="--w:88.4%"></div></div><div class="barValue">88.4%</div></div>
@@ -513,15 +468,15 @@ table{width:100%;border-collapse:collapse}
       <div class="barRow"><div class="barName">XGBOOST</div><div class="barTrack"><div class="barFill" style="--w:92.7%"></div></div><div class="barValue">92.7%</div></div>
     </div>
     <div class="glass fragment fx delay1">
-      <div class="kicker">BEST MODEL / XGBOOST</div>
+      <div class="kicker">WINNER MODEL / XGBOOST</div>
       <div style="font:900 58px 'JetBrains Mono';color:#fff">92.7<span style="font-size:22px;color:var(--accent)">%</span></div>
       <div class="metricGrid">
         <div class="metric"><b>0.91</b><span>PRECISION</span></div>
         <div class="metric"><b>0.90</b><span>RECALL</span></div>
         <div class="metric"><b>0.91</b><span>F1 SCORE</span></div>
-        <div class="metric"><b>0.94</b><span>ROC-AUC</span></div>
+        <div class="metric"><b>0.94</b><span>SCORE RATE</span></div>
       </div>
-      <div class="callout"><p><strong class="accent">RESULT · </strong>XGBoost is the strongest-performing model in the supplied comparison.</p></div>
+      <div class="callout"><p><strong class="accent">RESULT · </strong>XGBoost ne baaki sabhi models se behtareen accuracy di hai.</p></div>
     </div>
   </div>
 </div></div>
@@ -530,45 +485,45 @@ table{width:100%;border-collapse:collapse}
 <!-- 08 -->
 <section>
 <div class="shell"><div class="content">
-  <div class="kicker fragment fx">08 / RESULTS</div>
-  <h2>What Drives the Prediction?</h2>
+  <div class="kicker fragment fx">08 / ANALYSIS</div>
+  <h2>Sabse Zyada Asar Kiska Padta Hai?</h2>
   <div class="cardGrid cols2">
     <div class="glass fragment fx">
-      <div class="kicker">FEATURE IMPORTANCE</div>
-      <div class="barRow"><div class="barName">G2 GRADE</div><div class="barTrack"><div class="barFill" style="--w:34%"></div></div><div class="barValue">34%</div></div>
-      <div class="barRow"><div class="barName">G1 GRADE</div><div class="barTrack"><div class="barFill" style="--w:26%"></div></div><div class="barValue">26%</div></div>
+      <div class="kicker">IMPORTANT FACTORS</div>
+      <div class="barRow"><div class="barName">G2 MARKS</div><div class="barTrack"><div class="barFill" style="--w:34%"></div></div><div class="barValue">34%</div></div>
+      <div class="barRow"><div class="barName">G1 MARKS</div><div class="barTrack"><div class="barFill" style="--w:26%"></div></div><div class="barValue">26%</div></div>
       <div class="barRow"><div class="barName">PAST FAILS</div><div class="barTrack"><div class="barFill" style="--w:14%"></div></div><div class="barValue">14%</div></div>
       <div class="barRow"><div class="barName">ABSENCES</div><div class="barTrack"><div class="barFill" style="--w:11%"></div></div><div class="barValue">11%</div></div>
     </div>
     <div class="glass fragment fx delay1">
-      <div class="kicker">ROC CURVE</div>
+      <div class="kicker">GRAPH CHECK (ROC)</div>
       <div class="roc">
         <svg viewBox="0 0 100 100" preserveAspectRatio="none">
           <line x1="0" y1="100" x2="100" y2="0" stroke="rgba(255,255,255,.14)" stroke-dasharray="3 3"/>
           <path class="rocPath" d="M0,100 C7,53 15,24 31,15 C49,5 67,3 100,0" fill="none" stroke="var(--accent)" stroke-width="2"/>
         </svg>
-        <span style="position:absolute;right:12px;bottom:10px;font:800 15px 'JetBrains Mono';color:#fff">AUC 0.94</span>
+        <span style="position:absolute;right:12px;bottom:10px;font:800 15px 'JetBrains Mono';color:#fff">RATE 0.94</span>
       </div>
-      <p style="font-size:14px!important;margin-bottom:0">The supplied result set identifies prior grades, previous failures and absences among the strongest influential features.</p>
+      <p style="font-size:14px!important;margin-bottom:0">Pichle test ke marks, purani fail hone ki history aur attendance se hi sabse pakka andaza lagta hai.</p>
     </div>
   </div>
-  <div class="callout fragment fx"><p><strong class="accent">INTERPRETATION · </strong>Academic history provides a strong signal for predicting later performance, while attendance contributes additional information.</p></div>
+  <div class="callout fragment fx"><p><strong class="accent">CONCLUSION · </strong>Student ka purana academic record hi aane wale result ka sabse bada sanket hota hai.</p></div>
 </div></div>
 </section>
 
 <!-- 09 -->
 <section>
 <div class="shell"><div class="content">
-  <div class="kicker fragment fx">09 / APPLICATIONS & FUTURE WORK</div>
-  <h2>From Prediction to Intervention</h2>
+  <div class="kicker fragment fx">09 / FUTURE WORK</div>
+  <h2>Aage Isko Kahan Use Kiya Ja Sakta Hai?</h2>
   <div class="timeline">
-    <div class="phase fragment fx"><b>01 / EARLY WARNING</b><h4>Identify At-Risk Students</h4><p>Flag students who may need additional academic attention before final outcomes.</p></div>
-    <div class="phase fragment fx delay1"><b>02 / PERSONALIZATION</b><h4>Target Support</h4><p>Use prediction signals to inform personalized learning paths and academic support.</p></div>
-    <div class="phase fragment fx delay2"><b>03 / INSTITUTION</b><h4>Decision Support</h4><p>Potential use includes scholarship screening and broader academic monitoring.</p></div>
+    <div class="phase fragment fx"><b>01 / WARNING</b><h4>Early Warning</h4><p>Weak students ko shuruat mein hi pehchan kar unki extra classes lagana.</p></div>
+    <div class="phase fragment fx delay1"><b>02 / SUPPORT</b><h4>Personal Help</h4><p>Har student ki zarurat ke mutabiq unko guidance dena.</p></div>
+    <div class="phase fragment fx delay2"><b>03 / COLLEGE</b><h4>Smart Decisions</h4><p>Colleges dwara scholarship aur special support ke liye.</p></div>
   </div>
   <div class="cardGrid cols2" style="margin-top:17px">
-    <div class="glass fragment fx"><div class="kicker">FUTURE DIRECTIONS</div><p>• LMS clickstream data<br>• Deep Learning / LSTM<br>• Explainable AI with SHAP / LIME</p></div>
-    <div class="glass fragment fx delay1"><div class="kicker">RESPONSIBLE USE</div><p>Predictions should support educators, not replace human judgment. Data quality, fairness, privacy and interpretability remain important considerations.</p></div>
+    <div class="glass fragment fx"><div class="kicker">AANE WALE BADLAV</div><p>• Online class activity track karna<br>• Advanced Deep Learning models lagana<br>• Aur zyada saaf tarike se results dikhana</p></div>
+    <div class="glass fragment fx delay1"><div class="kicker">DHYAN RAKHNE WALI BAAT</div><p>Ye model sirf madad ke liye hai, asli faisla teachers ka hi sabse upar hoga. Privacy aur data ki suraksha sabse pehle hai.</p></div>
   </div>
 </div></div>
 </section>
@@ -579,14 +534,14 @@ table{width:100%;border-collapse:collapse}
 <div class="content">
   <div class="kicker fragment fx">10 / CONCLUSION</div>
   <div class="endQuote fragment fx">
-    <h2>Final Takeaway</h2>
-    <p>Machine learning can provide a practical framework for predicting student performance and identifying signals that may support earlier intervention.</p>
-    <p>In the supplied results, <strong class="accent">XGBoost reaches 92.7% accuracy</strong> with an ROC-AUC of <strong>0.94</strong>, while prior grades and attendance emerge as important predictive signals.</p>
-    <div class="callout"><p><strong class="accent">NEXT STEP · </strong>Validate the model on additional student populations and strengthen interpretability before real-world deployment.</p></div>
+    <h2>Nishkarsh (Conclusion)</h2>
+    <p>Smart computer programs ki madad se hum students ki performance ko asani se predict kar sakte hain taaki waqt rehte unki madad ki ja sake.</p>
+    <p>Humare project mein <strong class="accent">XGBoost model ne 92.7% accuracy</strong> ke sath sabse behtareen result diya hai.</p>
+    <div class="callout"><p><strong class="accent">NEXT STEP · </strong>Isko aur zyada schools par test karna aur real-world mein apply karna.</p></div>
     <div class="qa">THANK YOU · QUESTIONS & ANSWERS</div>
   </div>
   <p class="meta fragment fx" style="margin-top:22px">
-    References: Cortez & Silva (2008) · Amrieh et al. (2016) · UCI ML Repository · Scikit-learn documentation · [GitHub / Project Repository]
+    References: Cortez & Silva (2008) · Amrieh et al. (2016) · UCI Repository · Project Team Submission
   </p>
 </div>
 </div>
@@ -597,7 +552,7 @@ table{width:100%;border-collapse:collapse}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
 <script>
-const topics=["HERO","INTRODUCTION","RESEARCH GAP","DATASET","METHODOLOGY","ALGORITHMS","EVALUATION","RESULTS","APPLICATIONS","CONCLUSION"];
+const topics=["HERO","INTRODUCTION","RESEARCH","DATASET","STEPS","MODELS","RESULTS","ANALYSIS","FUTURE","CONCLUSION"];
 const total=topics.length;
 const rail=document.getElementById("rail"), track=document.getElementById("curveTrack"), hudNum=document.getElementById("hudNum"), progress=document.getElementById("progress"), geo=document.getElementById("geoStage");
 
@@ -610,20 +565,14 @@ topics.forEach((t,i)=>{
 });
 const items=[...document.querySelectorAll(".curveItem")], dots=[...document.querySelectorAll(".railDot")];
 
-// ============================================================
-// SIDEBAR GEOMETRY — items sit at fixed "top" offsets and the
-// TRACK shifts so the active item always lands at TARGET_Y.
-// This means the active item NEVER drifts as slides progress.
-// ============================================================
 const SPACING = 52;
-const TARGET_Y = 300;   // where the active item sits (of 600px tall nav)
+const TARGET_Y = 300;
 
 items.forEach((el, i) => {
   el.style.top = (i * SPACING) + 'px';
 });
 
 function layoutCurve(activeIndex){
-  // shift the track so item[activeIndex] lands at TARGET_Y
   const ty = TARGET_Y - activeIndex * SPACING;
   track.style.transform = `translateY(${ty}px)`;
 
@@ -631,7 +580,6 @@ function layoutCurve(activeIndex){
     const d = i - activeIndex;
     const ad = Math.abs(d);
 
-    // hide far items entirely (no accidental text bleed)
     if (ad > 5) {
       el.style.opacity = 0;
       el.style.visibility = 'hidden';
@@ -640,10 +588,10 @@ function layoutCurve(activeIndex){
     }
     el.style.visibility = 'visible';
 
-    const x = ad * 4;                                   // arc bulge to the right
-    const z = -ad * 26;                                 // depth
+    const x = ad * 4;
+    const z = -ad * 26;
     const scale = d === 0 ? 1.15 : Math.max(0.7, 1 - ad * 0.08);
-    const rotY = Math.max(-15, Math.min(15, d * 5));    // subtle 3D twist
+    const rotY = Math.max(-15, Math.min(15, d * 5));
     const opacity = d === 0 ? 1 : Math.max(0.25, 0.9 - ad * 0.16);
 
     el.style.transform = `translate3d(${x}px, 0, ${z}px) rotateY(${rotY}deg) scale(${scale})`;
@@ -663,7 +611,6 @@ function updateMotion(e){
 
   layoutCurve(i);
 
-  // Only re-trigger entrance animations when the actual SLIDE changes.
   if (i !== lastSlideIndex) {
     lastSlideIndex = i;
     document.querySelectorAll('.slides>section').forEach(s => s.classList.remove('entering'));
@@ -687,7 +634,6 @@ Reveal.initialize({
 Reveal.on('ready', updateMotion);
 Reveal.on('slidechanged', updateMotion);
 
-// Mouse parallax on the geo stage
 document.addEventListener('pointermove', e => {
   const x = (e.clientX/window.innerWidth - .5) * 2;
   const y = (e.clientY/window.innerHeight - .5) * 2;
@@ -695,7 +641,6 @@ document.addEventListener('pointermove', e => {
 });
 document.addEventListener('pointerleave', () => { geo.style.transform = 'translate3d(0,0,0)'; });
 
-// Keyboard nav — the lastSlideIndex guard inside updateMotion prevents redundancy
 document.addEventListener('keydown', e => {
   if (['ArrowRight','ArrowDown','PageDown',' ','ArrowLeft','ArrowUp','PageUp'].includes(e.key)) {
     requestAnimationFrame(() => setTimeout(() => updateMotion(Reveal.getState()), 70));
